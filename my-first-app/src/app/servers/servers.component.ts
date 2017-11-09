@@ -8,9 +8,4 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }
