@@ -4,6 +4,11 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   selector: 'app-server',
   templateUrl: './server.component.html',
   styleUrls: ['./server.component.css'],
+  styles: [`
+    .online {
+      color: white;
+    }
+  `]
   encapsulation: ViewEncapsulation.None
 })
 export class ServerComponent implements OnInit {
@@ -11,14 +16,17 @@ export class ServerComponent implements OnInit {
   serverID: number = 10;
   serverSatus: string = 'offline';
 
+
+  constructor() {
+    this.serverSatus = Math.random() > 0.5 ? 'online' : 'offline';
+  }
+
   getServerStatus() {
     return this.serverSatus;
   }
 
-  constructor() {
-    setTimeout(() => {
-      this.allowNewServer = true;
-    }, 2000);
+  getColor() {
+    return this.serverSatus === 'online' ? 'green' : 'red';
   }
 
   ngOnInit() {
