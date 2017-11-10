@@ -14,4 +14,15 @@ export class ServerComponent implements OnInit {
   getServerStatus() {
     return this.serverSatus;
   }
+
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);
+  }
+
+  ngOnInit() {
+
+  }
+
 }
