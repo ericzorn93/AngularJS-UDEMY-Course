@@ -8,7 +8,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
     .online {
       color: white;
     }
-  `]
+  `],
   encapsulation: ViewEncapsulation.None
 })
 export class ServerComponent implements OnInit {
