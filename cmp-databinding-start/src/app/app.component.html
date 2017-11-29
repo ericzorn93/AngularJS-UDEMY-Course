@@ -9,7 +9,9 @@
       <button class="btn btn-danger" (click)="onDestroyFirst()">Destroy first Component</button>
       <app-server-element
         *ngFor="let serverElement of serverElements"
-        [srvElement]="serverElement" [name]="serverElement.name"></app-server-element>
+        [srvElement]="serverElement"
+        [name]="serverElement.name">
+      </app-server-element>
     </div>
   </div>
 </div>
