@@ -4,21 +4,22 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { CockpitComponent } from './cockpit/cockpit.component';
-import { ServerElementComponent } from './server-element/server-element.component';
+import { ActiveUsersComponent } from './active-users/active-users.component';
+import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
+import {CounterService} from './counter.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CockpitComponent,
-    ServerElementComponent
+    ActiveUsersComponent,
+    InactiveUsersComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
